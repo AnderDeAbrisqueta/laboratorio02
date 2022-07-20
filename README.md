@@ -1,4 +1,4 @@
-# Mongo DB queries
+# Mongo DB consultas
 
 ## General
 
