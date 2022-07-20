@@ -65,37 +65,37 @@ En este base de datos puedes encontrar un montón de apartamentos y sus reviews,
   - De que ciudad (no queremos mostrar un objeto, solo el string con la ciudad).
   - El precio.
   
-  ```
+```
   
-  ```
+```
   
   - Queremos saber cuántos alojamientos hay disponibles por país.
   
-  ```
+```
   
-  ```
+```
   
-  # Opcional
+ # Opcional
   
-  - Queremos saber el precio medio de alquiler de airbnb en España.
+- Queremos saber el precio medio de alquiler de airbnb en España.
   
-  ```
+```
   
-  ```
+```
   
-  - ¿Y si quisiéramos hacer como el anterior, pero sacarlo por paises?
+- ¿Y si quisiéramos hacer como el anterior, pero sacarlo por paises?
   
-  ```
+```
   
-  ```
+```
   
-  - Repite los mismos pasos pero agrupando también por número de habitaciones.
+- Repite los mismos pasos pero agrupando también por número de habitaciones.
   
-  ```
+```
   
-  ```
+```
   
-  # Desafio
+# Desafio
   
 - Queremos mostrar el top 5 de apartamentos más caros en España, y sacar los siguentes campos:
   - Nombre.
