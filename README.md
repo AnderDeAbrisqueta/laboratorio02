@@ -2,7 +2,7 @@
 
 ## General
 
-En este base de datos puedes encontrar un montón de apartamentos y sus reviews, esto está sacado de hacer webscrapping.
+En esta base de datos puedes encontrar un montón de apartamentos y sus reviews, esto está sacado de hacer webscrapping.
 
 **Pregunta**: Si montaras un sitio real, ¿qué posibles problemas pontenciales le ves a cómo está almacenada la información?
 
