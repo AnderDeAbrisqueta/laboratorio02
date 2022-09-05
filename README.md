@@ -128,12 +128,6 @@ db.listingsAndReviews.find(
   - El precio.
   
 ```
-  
-```
-  
-  - Queremos saber cuántos alojamientos hay disponibles por país.
-  
-```
 use('mylistings');
 
 db.listingsAndReviews
@@ -158,6 +152,12 @@ db.listingsAndReviews
     //       },
     // }
 ]);
+```
+  
+  - Queremos saber cuántos alojamientos hay disponibles por país.
+  
+```
+
   
 ```
   
