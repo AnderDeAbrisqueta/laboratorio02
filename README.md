@@ -74,6 +74,17 @@ db.listingsAndReviews.find(
 - Al requisito anterior, hay que añadir que nos gusta la tecnología queremos que el apartamento tenga wifi.
 
 ```
+use('mylistings')
+
+db.listingsAndReviews.find(
+    {
+        $and: [
+            {beds: 4},
+            {bathrooms: 2.0},
+            {amenities: "Wifi"}
+        ]
+    } 
+);
 
 ```
 
