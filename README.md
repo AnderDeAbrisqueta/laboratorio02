@@ -40,6 +40,16 @@ db.listingsAndReviews
 ])
 .pretty();
 
+- Resultado:
+´´´
+[
+  {
+    "Número de apartamentos en España:": 633
+  }
+]
+
+´´´
+
 ```
 
 - Lista los 10 primeros:
