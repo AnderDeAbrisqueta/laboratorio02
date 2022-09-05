@@ -134,6 +134,30 @@ db.listingsAndReviews.find(
   - Queremos saber cuántos alojamientos hay disponibles por país.
   
 ```
+use('mylistings');
+
+db.listingsAndReviews
+.aggregate([
+    { 
+        $match: 
+        { 
+            "address.country": "Spain" 
+        } 
+    }, 
+    {
+        $project: {
+          _id: 0,
+          name: 1,
+          "address.market": 1,
+          price: 1
+        }
+    },
+    // {
+    //      $unwind: {
+    //         path: "$address.market",
+    //       },
+    // }
+]);
   
 ```
   
