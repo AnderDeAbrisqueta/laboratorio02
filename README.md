@@ -17,11 +17,11 @@ En esta base de datos puedes encontrar un montón de apartamentos y sus reviews,
 - Saca en una consulta cuántos apartamentos hay en España.
 
 ```
-use('mylistings')
+use('mylistings');
 
 db.listingsAndReviews.count(
     {
-        "address.country": {$eq: "Spain"}
+        "address.country": "Spain"
     }
 );
 
@@ -32,7 +32,7 @@ db.listingsAndReviews.count(
   - Ordenados por precio.
   
 ```
-use('mylistings')
+use('mylistings');
 
 db.listingsAndReviews.find(
     {},
@@ -58,14 +58,12 @@ db.listingsAndReviews.find(
   - Dos cuartos de baño.
   
 ```
-use('mylistings')
+use('mylistings');
 
 db.listingsAndReviews.find(
     {
-        $and: [
-            {beds: 4},
-            {bathrooms: 2.0}
-        ]
+         beds: 4,
+         bathrooms: 2.0
     } 
 );
 
@@ -74,15 +72,13 @@ db.listingsAndReviews.find(
 - Al requisito anterior, hay que añadir que nos gusta la tecnología queremos que el apartamento tenga wifi.
 
 ```
-use('mylistings')
+use('mylistings');
 
 db.listingsAndReviews.find(
     {
-        $and: [
-            {beds: 4},
-            {bathrooms: 2.0},
-            {amenities: "Wifi"}
-        ]
+        beds: 4,
+        bathrooms: 2.0,
+        amenities: "Wifi"
     } 
 );
 
@@ -91,16 +87,14 @@ db.listingsAndReviews.find(
 - Y bueno, un amigo se ha unido que trae un perro, así que a la query anterior tenemos que buscar que permitan mascota Pets Allowed.
 
 ```
-use('mylistings')
+use('mylistings');
 
 db.listingsAndReviews.find(
     {
-        $and: [
-            {beds: 4},
-            {bathrooms: 2.0},
-            {amenities: "Wifi"},
-            {amenities: "Pets allowed"}
-        ]
+        beds: 4,
+        bathrooms: 2.0,
+        amenities: "Wifi",
+        amenities: "Pets allowed"
     } 
 );
 ```
@@ -110,7 +104,20 @@ db.listingsAndReviews.find(
 - Estamos entre ir a Barcelona o a Portugal, los dos destinos nos valen, peeero... queremos que el precio nos salga baratito (50 $), y que tenga buen rating de reviews.
 
 ```
+use('mylistings');
 
+db.listingsAndReviews.find(
+    {
+        $or: [
+            {"address.country": "Portugal"},
+            {"address.market": "Barcelona"}
+        ],
+        $and: [
+            {price: {$lte: 50.00}},
+            {"review_scores.review_scores_rating": {$gte: 80}}
+        ]
+    }
+);
 ```
 
 ## Agregaciones
