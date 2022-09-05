@@ -36,7 +36,7 @@ use('mylistings')
 
 db.listingsAndReviews.find(
     {
-        "address.country": {$eq: "Spain"}
+        
     },
     {
         name: 1,
@@ -46,7 +46,7 @@ db.listingsAndReviews.find(
         _id: 0
 
     }
-);
+).list(10);
 ```
 
 ### Filtrando
