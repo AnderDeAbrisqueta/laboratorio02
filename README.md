@@ -35,9 +35,7 @@ db.listingsAndReviews.count(
 use('mylistings')
 
 db.listingsAndReviews.find(
-    {
-        
-    },
+    {},
     {
         name: 1,
         beds: 1,
@@ -46,7 +44,11 @@ db.listingsAndReviews.find(
         _id: 0
 
     }
-).list(10);
+)
+.list(10)
+.sort({price: 1})
+.pretty();
+
 ```
 
 ### Filtrando
