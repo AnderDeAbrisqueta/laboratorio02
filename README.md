@@ -91,7 +91,18 @@ db.listingsAndReviews.find(
 - Y bueno, un amigo se ha unido que trae un perro, así que a la query anterior tenemos que buscar que permitan mascota Pets Allowed.
 
 ```
+use('mylistings')
 
+db.listingsAndReviews.find(
+    {
+        $and: [
+            {beds: 4},
+            {bathrooms: 2.0},
+            {amenities: "Wifi"},
+            {amenities: "Pets allowed"}
+        ]
+    } 
+);
 ```
 
 ### Operadores lógicos
