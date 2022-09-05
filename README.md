@@ -32,7 +32,21 @@ db.listingsAndReviews.count(
   - Ordenados por precio.
   
 ```
+use('mylistings')
 
+db.listingsAndReviews.find(
+    {
+        "address.country": {$eq: "Spain"}
+    },
+    {
+        name: 1,
+        beds: 1,
+        price: 1,
+        "address.government_area": 1,
+        _id: 0
+
+    }
+);
 ```
 
 ### Filtrando
