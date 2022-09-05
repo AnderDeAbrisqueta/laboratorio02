@@ -17,6 +17,28 @@ En esta base de datos puedes encontrar un montón de apartamentos y sus reviews,
 - Saca en una consulta cuántos apartamentos hay en España.
 
 ```
+use('mylistings')
+
+db.listingsAndReviews
+.aggregate([
+    { 
+        $match: 
+        { 
+            "address.country": "Spain" 
+        } 
+    }, 
+    {
+        $project: {
+          _id:0,
+          "address.country": "Número de apartamentos en España:"
+        }
+    },
+    { 
+        $count: 
+        "Número de apartamentos en España:"
+    }
+])
+.pretty();
 
 ```
 
