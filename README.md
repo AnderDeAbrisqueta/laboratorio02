@@ -58,6 +58,16 @@ db.listingsAndReviews.find(
   - Dos cuartos de baño.
   
 ```
+use('mylistings')
+
+db.listingsAndReviews.find(
+    {
+        $and: [
+            {beds: {$eq: 4}},
+            {bathrooms: {$eq: 2.0}}
+        ]
+    } 
+);
 
 ```
 
