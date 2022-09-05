@@ -40,6 +40,8 @@ db.listingsAndReviews
 ])
 .pretty();
 
+```
+
 - Resultado:
 ´´´
 [
@@ -49,8 +51,6 @@ db.listingsAndReviews
 ]
 
 ´´´
-
-```
 
 - Lista los 10 primeros:
   - Sólo muestra: nombre, camas, precio, government_area.
