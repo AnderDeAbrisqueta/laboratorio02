@@ -19,36 +19,11 @@ En esta base de datos puedes encontrar un montón de apartamentos y sus reviews,
 ```
 use('mylistings')
 
-db.listingsAndReviews
-.aggregate([
-    { 
-        $match: 
-        { 
-            "address.country": "Spain" 
-        } 
-    }, 
+db.listingsAndReviews.count(
     {
-        $project: {
-          _id:0,
-          "address.country": "Número de apartamentos en España:"
-        }
-    },
-    { 
-        $count: 
-        "Número de apartamentos en España:"
+        "address.country": {$eq: "Spain"}
     }
-])
-.pretty();
-
-```
-
-- Resultado:
-```
-[
-  {
-    "Número de apartamentos en España:": 633
-  }
-]
+);
 
 ```
 
