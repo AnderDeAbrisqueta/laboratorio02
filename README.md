@@ -63,8 +63,8 @@ use('mylistings')
 db.listingsAndReviews.find(
     {
         $and: [
-            {beds: {$eq: 4}},
-            {bathrooms: {$eq: 2.0}}
+            {beds: 4},
+            {bathrooms: 2.0}
         ]
     } 
 );
