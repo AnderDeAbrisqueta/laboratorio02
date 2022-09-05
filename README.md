@@ -43,14 +43,14 @@ db.listingsAndReviews
 ```
 
 - Resultado:
-´´´
+```
 [
   {
     "Número de apartamentos en España:": 633
   }
 ]
 
-´´´
+```
 
 - Lista los 10 primeros:
   - Sólo muestra: nombre, camas, precio, government_area.
