@@ -146,11 +146,6 @@ db.listingsAndReviews
           price: 1
         }
     },
-    // {
-    //      $unwind: {
-    //         path: "$address.market",
-    //       },
-    // }
 ]);
 ```
   
