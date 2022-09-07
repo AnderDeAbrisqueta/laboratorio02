@@ -19,7 +19,7 @@ En esta base de datos puedes encontrar un montón de apartamentos y sus reviews,
 ```
 use('mylistings');
 
-db.listingsAndReviews.count(
+db.listingsAndReviews.countDocuments(
     {
         "address.country": "Spain"
     }
