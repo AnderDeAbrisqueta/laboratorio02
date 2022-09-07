@@ -24,7 +24,6 @@ db.listingsAndReviews.countDocuments(
         "address.country": "Spain"
     }
 );
-
 ```
 
 - Lista los 10 primeros:
@@ -48,7 +47,6 @@ db.listingsAndReviews.find(
 .list(10)
 .sort({price: 1})
 .pretty();
-
 ```
 
 ### Filtrando
@@ -66,7 +64,6 @@ db.listingsAndReviews.find(
          bathrooms: 2.0
     } 
 );
-
 ```
 
 - Al requisito anterior, hay que añadir que nos gusta la tecnología queremos que el apartamento tenga wifi.
@@ -84,7 +81,6 @@ db.listingsAndReviews.find(
         }      
     } 
 );
-
 ```
 
 - Y bueno, un amigo se ha unido que trae un perro, así que a la query anterior tenemos que buscar que permitan mascota Pets Allowed.
