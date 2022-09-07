@@ -76,9 +76,12 @@ use('mylistings');
 
 db.listingsAndReviews.find(
     {
+    
         beds: 4,
         bathrooms: 2.0,
-        amenities: "Wifi"
+        amenities: {
+            $all: ["Wifi"]
+        }      
     } 
 );
 
@@ -91,10 +94,12 @@ use('mylistings');
 
 db.listingsAndReviews.find(
     {
+    
         beds: 4,
         bathrooms: 2.0,
-        amenities: "Wifi",
-        amenities: "Pets allowed"
+        amenities: {
+            $all: ["Wifi", "Pets allowed"]
+        }      
     } 
 );
 ```
