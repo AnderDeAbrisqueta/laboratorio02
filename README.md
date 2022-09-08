@@ -143,7 +143,7 @@ db.listingsAndReviews
         $project: {
           _id: 0,
           name: 1,
-          "address.market": 1,
+          city: "$address.market",
           price: 1
         }
     },
