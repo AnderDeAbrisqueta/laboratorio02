@@ -153,7 +153,37 @@ db.listingsAndReviews
   - Queremos saber cuántos alojamientos hay disponibles por país.
   
 ```
-  
+use('mylistings');
+
+db.listingsAndReviews
+.aggregate([
+    { 
+        $match: 
+        { 
+            $or: [
+                {"availability.availability_30": {$gt: 0}},
+                {"availability.availability_60": {$gt: 0}},
+                {"availability.availability_90": {$gt: 0}},
+                {"availability.availability_365": {$gt: 0}}
+            ]
+        }
+    },
+    {
+        $group: {
+            _id: "$address.country",
+            alojamientos_disponibles: {
+                $sum: 1
+            }
+        }
+    },
+    {
+        $project: {
+            _id: 1,
+            alojamientos_disponibles: 1
+        },
+        
+    }
+]);
 ```
   
  # Opcional
