@@ -153,7 +153,6 @@ db.listingsAndReviews
   - Queremos saber cuántos alojamientos hay disponibles por país.
   
 ```
-
   
 ```
   
